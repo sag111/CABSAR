@@ -15,6 +15,41 @@ The data is in Russian.
 
 Data was collected from several sources: posts of the Live Journal social network, texts of the online news agency Lenta.ru, and Twitter microblog posts.
 
+An example for an instance from the dataset is shown below:
+```
+{
+	'context': {
+		'text': 'даа уж, один Кирюха только и понимает ;-)',
+		'sentences': [
+			[
+				{'forma': 'даа', 'lemma': 'да'},
+			    {'forma': 'уж', 'lemma': 'уж'},
+			    {'forma': ',', 'lemma': ','},
+			    {'forma': 'один', 'lemma': 'один'},
+			    {'forma': 'Кирюха', 'lemma': 'Кирюх'},
+			    {'forma': 'только', 'lemma': 'только'},
+			    {'forma': 'и', 'lemma': 'и'},
+			    {'forma': 'понимает', 'lemma': 'понимать'},
+			    {'forma': ';', 'lemma': ';'},
+			    {'forma': '-', 'lemma': '-'},
+			    {'forma': ')', 'lemma': ')'}
+			]
+		]
+	},
+	
+	'aspect': {
+		'text': 'Кирюха',
+		'aspect_loc': [{'pos_start': 13, 'pos_end': 19}],
+		'ner': 'PER'
+	},
+	
+	'label': 1,
+	'source': 'twitter'
+}
+```
+Sentiment label codes: {0: 'neutral', 1: 'positive', 2: 'negative'}
+
+
 In total, dataset contains 5,552 unique sentences (6,705 pairs aspect-sentiment) with 1,580 sentences from LiveJournal posts, 2,050 sentences from Lenta.Ru, and 1,992 sentences from Twitter.
 
 The dataset includes a set of train/test splits, with 5,364, and 1,341 examples respectively.
@@ -95,7 +130,7 @@ The performance of the baseline models on our dataset in terms of F1 scores is p
 
 #### Table #2. Performance of baseline models.
 
-<table><thead><tr><th>Model</th><th colspan="2">Twitter<br></th><th colspan="2">LJ</th><th colspan="2">Lenta .ru</th><th colspan="2">All</th></tr></thead><tbody><tr><td></td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td></tr><tr><td>Random</td><td>0.37</td><td>0.35</td><td>0.33</td><td>0.32</td><td>0.35</td><td>0.33</td><td>0.33</td><td>0.32</td></tr><tr><td>Lexicon</td><td>0.48</td><td>0.36</td><td>0.42</td><td>0.34</td><td>0.35</td><td>0.34</td><td>0.41</td><td>0.35</td></tr><tr><td>TPOT (ELMo)</td><td>0.63</td><td>0.57</td><td>0.59</td><td>0.57</td><td>0.74</td><td>0.71</td><td>0.66</td><td>0.65</td></tr><tr><td>Our approach</td><td>0.64</td><td>0.58</td><td>0.67</td><td>0.66</td><td>0.78</td><td>0.72</td><td>0.72</td><td>0.70</td></tr></tbody></table>
+<table><thead><tr><th>Model</th><th colspan="2">Twitter<br></th><th colspan="2">LJ</th><th colspan="2">Lenta .ru</th><th colspan="2">All</th></tr></thead><tbody><tr><td></td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td><td>mic.</td><td>mac.</td></tr><tr><td>Random</td><td>0.34</td><td>0.33</td><td>0.34</td><td>0.33</td><td>0.34</td><td>0.32</td><td>0.31</td><td>0.30</td></tr><tr><td>Lexicon</td><td>0.48</td><td>0.36</td><td>0.42</td><td>0.34</td><td>0.35</td><td>0.34</td><td>0.41</td><td>0.35</td></tr><tr><td>TPOT (ELMo)</td><td>0.63</td><td>0.57</td><td>0.59</td><td>0.57</td><td>0.74</td><td>0.71</td><td>0.66</td><td>0.65</td></tr><tr><td>Our approach</td><td>0.64</td><td>0.58</td><td>0.67</td><td>0.66</td><td>0.78</td><td>0.72</td><td>0.72</td><td>0.70</td></tr></tbody></table>
 
 Note
 ---
