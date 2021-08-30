@@ -22,7 +22,7 @@ An example for an instance from the dataset is shown below:
 		'text': 'даа уж, один Кирюха только и понимает ;-)',
 		'sentences': [
 			[
-				{'forma': 'даа', 'lemma': 'да'},
+			    {'forma': 'даа', 'lemma': 'да'},
 			    {'forma': 'уж', 'lemma': 'уж'},
 			    {'forma': ',', 'lemma': ','},
 			    {'forma': 'один', 'lemma': 'один'},
